@@ -1,0 +1,93 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf500
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red61\green52\blue46;\red251\green251\blue249;\red0\green0\blue0;
+}
+{\*\expandedcolortbl;;\cssrgb\c30588\c26667\c23529;\cssrgb\c98824\c98824\c98039;\cssrgb\c0\c0\c0;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww21000\viewh19020\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Shell0\
+-ex02\
+drwx--xr-x  2 adrperez  2019  68 Jun  1 20:47 test0 \'97> touch -t 06012047 test0 y chmod 715\
+-rwx--xr--  1 adrperez  2019   4 Jul  4 15:33 test1 \'97> touch -t 06012146 test1 y chmod 714\
+dr-x---r--  2 adrperez  2019  68 Jul  4 10:37 test2 \'97> touch -t 06012245 test2 y chmod 504\
+-r-----r--  1 adrperez  2019   0 Jul  4 10:37 test3 \'97> ln test3 test5 (crear enlace duro y que se ponga el 2), touch -t 06012344, chmod 404 test3\
+-rw-r----x  1 adrperez  2019   0 Jul  4 10:37 test4 \'97> touch -t 06012343, chmod 651\
+-r-----r--  1 adrperez  2019   0 Jul  4 10:37 test5 \'97> \
+lrwxrwxrwx  1 adrperez  2019   5 Jul  4 10:40 test6 -> touch -h 06012220 test6, chmod -h 777\
+\
+Para cambiar las fechas touch -t 06012047 excepto en el link que es touch -h\
+Para conseguir que haya dos en test3 y test5, hay que hacer que sean links duros entre ellos: ln test3 test5\
+Pra hacer el link soft del 6, hay que poner ln -s test0 test6  \'97> link source_file target_file \
+\
+Para descomprimir tar xfvp exo2.tar\
+\
+-ex03\
+ssh-keygen -t rsa\
+Se comparte la info que aparece en el archivo .pub\
+https://www.siteground.es/kb/generar-clave-ssh-linux/\
+\
+-ex04\
+ls -mpt\
+m \'97> separar por comas\
+p \'97> para poner la barra despu\'e9s de los directorios\
+t \'97> para ordenar por tiempo\
+\
+-ex05\
+git log --format='%H' -5 \'97> muestra solo los ids con %H\
+\
+-ex06\
+cd ..\
+git ls-files --others --ignored --exclude-standard\
+\'97others para que aparezcan los untracked (los que no est\'e1 siguiendo)\
+\'97ignored para ver los archivos ignorados (los que est\'e1n en el ignorefiles). El ignored tieneque tener un patr\'f3n exclude obligatoriamente para indicarle que archivos ignorar, al poner exlude-strandar ignorar\'e1 las exclusiones est\'e1ndar de git, en este caso, los que est\'e1n en el  \cf2 \cb3 \expnd0\expndtw0\kerning0
+.gitignore\
+git check-ignore *\cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\
+Al final es: git status --ignored -s | grep '!!' | cut -d ' ' -f2 \
+porque si no, no funciona desde cualquier carpeta\
+busca los ignorados en formato short\
+los ignorados son los que aparecen con !!\
+y simplemente hay que coger desde la columna 2\
+\
+-ex07\
+patch -b a sw.diff \'97> averigua la diferencia entre a y sw.diff y saca el b que despu\'e9s hay que renombrar\
+mv a b \'97> para renombrar\
+\
+\
+-ex08 \
+find . -type f \\( -name "#*#" -o -name "*~" \\) -print -delete\
+Se utilizan los \\ para quitar el significado original de los par\'e9ntesis que se utiliza en linux para otra cosa y si no da error\
+Si no se utilizan los par\'e9ntesis, si ambos archivo existen, sale false y no encontrar\'eda ninguno\
+https://www.tecmint.com/linux-find-command-to-search-multiple-filenames-extensions/\
+\
+-ex09\
+Formato: 41	string	42	42 file \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl280\partightenfactor0
+\ls1\ilvl0\cf4 {\listtext	1.	}\expnd0\expndtw0\kerning0
+Byte offset --> a partir del byte que quiere buscar\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+Value type --> string short int long\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+Optional relational operator ("=" by default) and value to match (numeric or string constant) --> numero \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	4.	}\expnd0\expndtw0\kerning0
+String to be printed --> mensaje \
+\pard\tx566\pardeftab720\sl280\partightenfactor0
+\cf4 Se separa por tabulador para hacer las columnas\
+\
+\
+\
+-------------\
+git remote add origin link\
+git push\
+copiar lo que aparece\
+\
+git remote set-url origin link para cuando se hace retry\
+\
+\
+\
+\
+}
