@@ -1,40 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adrperez <adrperez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/17 08:53:09 by adrperez          #+#    #+#             */
-/*   Updated: 2022/07/17 18:46:44 by adrperez         ###   ########.fr       */
+/*   Created: 2022/07/17 18:24:02 by adrperez          #+#    #+#             */
+/*   Updated: 2022/07/17 18:29:45 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strlowcase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] = str[i] + 32;
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (str);
 }
 
 int	main(void)
 {
-	char src[] = "Hola";
-	char destino[] = "Adios";
-	char *prueba;
-	prueba = ft_strcpy(destino, src);
-	printf("Source: %s", src);
-	printf("\nDestino: %s", ft_strcpy(destino, src));
-	printf("\nPuntero: %c", *prueba);
+	char str[5] = "hOLA";
+	char str2[5] = "h8la";
+	char str3[5] = "HOLA";
+	printf("%s", ft_strlowcase(str));
+	printf("\n%s", ft_strlowcase(str2));
+	printf("\n%s", ft_strlowcase(str3));
 	return (0);
 }
-
