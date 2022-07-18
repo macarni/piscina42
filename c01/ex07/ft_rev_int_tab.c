@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 21:00:49 by adrperez          #+#    #+#             */
-/*   Updated: 2022/07/17 13:24:10 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/07/18 08:25:50 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	ft_rev_int_tab(int *tab, int size)
 {
 	int	num[4] = {1, 2, 3, 4};
 
-	ft_rev_int_tab(&num[0], 4);
+	ft_rev_int_tab(num, 4);
 
 	int cont = 0;
 	while (cont < 4)
