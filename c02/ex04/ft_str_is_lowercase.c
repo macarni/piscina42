@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 16:14:19 by adrperez          #+#    #+#             */
-/*   Updated: 2022/07/17 16:16:48 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/07/19 10:30:21 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ int	ft_str_is_lowercase(char *str)
 	int	i;
 
 	i = 0;
-	if (str[i] == '\0')
-		return (1);
 	while (str[i] != '\0')
 	{
 		if (str[i] < 'a' || str[i] > 'z')
@@ -28,9 +26,9 @@ int	ft_str_is_lowercase(char *str)
 	return (1);
 }
 
-int	main(void)
+/*int	main(void)
 {
-	char	*str = "";
+	char	*str = "iaaks:jdalk";
 	printf("Resultado: %d", ft_str_is_lowercase(str));
 	return (0);
-}
+}*/

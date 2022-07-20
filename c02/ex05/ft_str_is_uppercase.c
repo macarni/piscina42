@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 16:17:20 by adrperez          #+#    #+#             */
-/*   Updated: 2022/07/17 16:18:57 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/07/19 10:31:53 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ int	ft_str_is_uppercase(char *str)
 	int	i;
 
 	i = 0;
-	if (str[i] == '\0')
-		return (1);
 	while (str[i] != '\0')
 	{
 		if (str[i] < 'A' || str[i] > 'Z')
@@ -28,10 +26,9 @@ int	ft_str_is_uppercase(char *str)
 	return (1);
 }
 
-int	main(void)
+/*int	main(void)
 {
-	char	*str = "AAJDJALJaDA";
+	char	*str = "asdjasl";
 	printf("Resultado: %d", ft_str_is_uppercase(str));
 	return (0);
-}
-
+}*/

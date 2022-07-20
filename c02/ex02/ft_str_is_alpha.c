@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 15:47:43 by adrperez          #+#    #+#             */
-/*   Updated: 2022/07/17 15:59:52 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/07/19 10:22:07 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ int	ft_str_is_alpha(char *str)
 	int	i;
 
 	i = 0;
-	if (str[i] == '\0')
-		return (1);
 	while (str[i] != '\0')
 	{
 		if (str[i] < 'A' || str[i] > 'z')
@@ -28,9 +26,9 @@ int	ft_str_is_alpha(char *str)
 	return (1);
 }
 
-int	main(void)
+/*int	main(void)
 {
-	char	*str = "Hol9a";
+	char	*str = "Hola";
 	printf("Resultado: %d", ft_str_is_alpha(str));
 	return (0);
-}
+}*/

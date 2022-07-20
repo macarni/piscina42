@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 16:24:17 by adrperez          #+#    #+#             */
-/*   Updated: 2022/07/17 18:30:19 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/07/19 10:35:37 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strupcase(char *str)
 	return (str);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char str[5] = "hOLA";
 	char str2[5] = "hol8";
@@ -35,4 +35,4 @@ int	main(void)
 	printf("\n%s", ft_strupcase(str2));
 	printf("\n%s", ft_strupcase(str3));
 	return (0);
-}
+}*/

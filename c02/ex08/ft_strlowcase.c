@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 18:24:02 by adrperez          #+#    #+#             */
-/*   Updated: 2022/07/17 18:29:45 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/07/19 10:36:28 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strlowcase(char *str)
 	return (str);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char str[5] = "hOLA";
 	char str2[5] = "h8la";
@@ -35,4 +35,4 @@ int	main(void)
 	printf("\n%s", ft_strlowcase(str2));
 	printf("\n%s", ft_strlowcase(str3));
 	return (0);
-}
+}*/

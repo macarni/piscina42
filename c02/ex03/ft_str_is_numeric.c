@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 16:11:05 by adrperez          #+#    #+#             */
-/*   Updated: 2022/07/17 16:13:52 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/07/19 10:23:34 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ int	ft_str_is_numeric(char *str)
 	int	i;
 
 	i = 0;
-	if (str[i] == '\0')
-		return (1);
 	while (str[i] != '\0')
 	{
 		if (str[i] < '0' || str[i] > '9')
@@ -28,10 +26,9 @@ int	ft_str_is_numeric(char *str)
 	return (1);
 }
 
-int	main(void)
+/*int	main(void)
 {
-	char	*str = "1234";
+	char	*str = "";
 	printf("Resultado: %d", ft_str_is_numeric(str));
 	return (0);
-}
-
+}*/

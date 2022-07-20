@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 08:53:09 by adrperez          #+#    #+#             */
-/*   Updated: 2022/07/17 18:46:44 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/07/19 10:14:54 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,11 @@ char	*ft_strcpy(char *dest, char *src)
 	return (dest);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char src[] = "Hola";
 	char destino[] = "Adios";
-	char *prueba;
-	prueba = ft_strcpy(destino, src);
 	printf("Source: %s", src);
 	printf("\nDestino: %s", ft_strcpy(destino, src));
-	printf("\nPuntero: %c", *prueba);
 	return (0);
-}
-
+}*/

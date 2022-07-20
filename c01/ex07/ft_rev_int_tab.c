@@ -6,38 +6,37 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 21:00:49 by adrperez          #+#    #+#             */
-/*   Updated: 2022/07/18 08:25:50 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/07/18 13:31:44 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+//#include <stdio.h>
 
 void	ft_rev_int_tab(int *tab, int size)
 {
-	int	cont;
-	int	change;
+	int	aux;
+	int	i;
 
-	cont = 0;
-	while (cont < size / 2)
+	i = 0;
+	while (i < size / 2)
 	{
-		change = tab[size - 1 - cont];
-		tab[size - 1 - cont] = tab[cont];
-		tab[cont] = change;
-		cont++;
+		aux = tab[size - i - 1];
+		tab[size - i - 1] = tab[i];
+		tab[i] = aux;
+		i++;
 	}
 }
 
-/*int	main(void)
+/*int    main(void)
 {
-	int	num[4] = {1, 2, 3, 4};
+    int    num[4] = {1, 2, 3, 4};
 
-	ft_rev_int_tab(num, 4);
+    ft_rev_int_tab(num, 4);
 
-	int cont = 0;
-	while (cont < 4)
-	{
-		printf("%d", num[cont]);
-		cont++;
-	}
+    int cont = 0;
+    while (cont < 4)
+    {
+        printf("%d", num[cont]);
+        cont++;
+    }
 }*/
