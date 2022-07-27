@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 15:42:46 by adrperez          #+#    #+#             */
-/*   Updated: 2022/07/24 21:13:00 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/07/25 16:54:50 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strstr(char *str, char *to_find)
 	i = 0;
 	if (to_find[i] == '\0')
 		return (str);
-	while (str != '\0')
+	while (str[i] != '\0')
 	{
 		f = 0;
 		while (to_find[f] == str[f + i] && to_find[f] != '\0')

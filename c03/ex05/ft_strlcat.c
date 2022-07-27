@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 09:08:29 by adrperez          #+#    #+#             */
-/*   Updated: 2022/07/24 21:32:34 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/07/26 19:02:41 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	i = dest_size;
 	if (size == 0 || size < dest_size)
 		return (src_size + size);
-	while (src[i] != '\0' && j < (size - dest_size - 1))
+	while (src[j] != '\0' && j < (size - dest_size - 1))
 	{
 		dest[i] = src[j];
 		j++;
@@ -60,9 +60,9 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
     char dest [20] = "Hola que tal";
 	char src2[] = "????";
     char dest2[20] = "Hola que tal";	
-    printf("Original: %lu \n", strlcat(dest, src, 15));
+    printf("Original: %lu \n", strlcat(dest, src, 1));
     printf("Destino original: %s \n", dest);
-	printf("Copia: %u \n", ft_strlcat(dest2, src2, 15));
+	printf("Copia: %u \n", ft_strlcat(dest2, src2, 1));
     printf("Destino copia: %s \n", dest2);
 
 }*/

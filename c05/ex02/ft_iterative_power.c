@@ -1,33 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_params.c                                    :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adrperez <adrperez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/21 19:59:45 by adrperez          #+#    #+#             */
-/*   Updated: 2022/07/26 19:10:16 by adrperez         ###   ########.fr       */
+/*   Created: 2022/07/26 13:13:25 by adrperez          #+#    #+#             */
+/*   Updated: 2022/07/26 13:25:05 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-int	main(int argc, char **argv)
+int	ft_iterative_power(int nb, int power)
 {
 	int	i;
-	int	j;
+	int	res;
 
-	i = argc - 1;
-	while (i < argc && i > 0)
+	res = 1;
+	i = power;
+	if (power < 0)
+		return (0);
+	if (power == 0)
+		return (1);
+	while (i > 0)
 	{
-		j = 0;
-		while (argv[i][j] != '\0')
-		{
-			write(1, &argv[i][j], 1);
-			j++;
-		}
-		write(1, "\n", 1);
+		res *= nb;
 		i--;
 	}
+	return (res);
+}
+
+int	main(void)
+{
+	int pot = ft_iterative_power(5, 2);
+	printf("%d\n", pot);
+	pot = ft_iterative_power(3, 0);
+	printf("%d\n", pot);
+	pot = ft_iterative_power(-3, 4);
+	printf("%d\n", pot);
+	pot = ft_iterative_power(3, -2);
+	printf("%d\n", pot);
 	return (0);
+
 }

@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adrperez <adrperez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/25 08:29:39 by adrperez          #+#    #+#             */
-/*   Updated: 2022/07/26 12:30:25 by adrperez         ###   ########.fr       */
+/*   Created: 2022/07/26 17:12:20 by adrperez          #+#    #+#             */
+/*   Updated: 2022/07/26 17:47:40 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_strlen(char *str)
+int	ft_fibonacci(int index)
 {
-	int	i;
+	if (index < 0)
+		return (-1);
+	if (index == 0)
+		return (0);
+	if (index == 1)
+		return (1);
+	return (ft_fibonacci(index - 2) + ft_fibonacci(index - 1));
+}	
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+int	main(void)
+{
+	printf("%i", ft_fibonacci(7));
 }
-
-/*int	main(void)
-{
-	int tam = ft_strlen("");
-	printf("Tamaño: %d", tam);
-}*/
