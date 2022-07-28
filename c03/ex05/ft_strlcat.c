@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 09:08:29 by adrperez          #+#    #+#             */
-/*   Updated: 2022/07/26 19:02:41 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/07/28 10:03:51 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,15 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	unsigned int	dest_size;
 	unsigned int	src_size;
 
-	dest_size = size_str(dest);
-	src_size = size_str(src);
 	j = 0;
-	i = dest_size;
-	if (size == 0 || size < dest_size)
+	i = 0;
+	while (dest[i] != '\0')
+		i++;
+	dest_size = i;
+	src_size = size_str(src);
+	if (size == 0 || size <= dest_size)
 		return (src_size + size);
-	while (src[j] != '\0' && j < (size - dest_size - 1))
+	while (src[j] != '\0' && j < size - dest_size - 1)
 	{
 		dest[i] = src[j];
 		j++;

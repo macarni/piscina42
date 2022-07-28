@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 13:13:25 by adrperez          #+#    #+#             */
-/*   Updated: 2022/07/26 13:25:05 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/07/27 20:08:44 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,22 @@
 
 int	ft_iterative_power(int nb, int power)
 {
-	int	i;
 	int	res;
 
-	res = 1;
-	i = power;
+	res = nb;
 	if (power < 0)
 		return (0);
 	if (power == 0)
 		return (1);
-	while (i > 0)
+	while (power > 1)
 	{
 		res *= nb;
-		i--;
+		power--;
 	}
 	return (res);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	int pot = ft_iterative_power(5, 2);
 	printf("%d\n", pot);
@@ -41,6 +39,8 @@ int	main(void)
 	printf("%d\n", pot);
 	pot = ft_iterative_power(3, -2);
 	printf("%d\n", pot);
+	pot = ft_iterative_power(3, 1);
+	printf("%d\n", pot);
 	return (0);
 
-}
+}*/
